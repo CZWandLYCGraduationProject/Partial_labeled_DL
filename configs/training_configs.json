@@ -1,0 +1,44 @@
+{
+    "data_policy": {
+        "crop_method": "normal",
+        "batch_size": 2,
+        "pos_ratio": 1,
+        "flip_prob": 0.5,
+        "data_path": "./data/",
+        "pos_data_path": "./data/second_dataset/pos_data",
+        "neg_data_path": "./data/second_dataset/neg_data",
+        "label_path": "./data/second_dataset/label",
+        "val_list": "./data/second_dataset/leiyc.list",
+        "pos_name": "./data/second_dataset/pos_data.list",
+        "neg_name": "./data/second_dataset/neg_data.list",
+        "test_data": "./data/test/data",
+        "test_list": "./data/test/test.list",
+        "padding_size": 32,
+        "rank_ratio": true,
+        "crop_step": 256,
+        "b_mean": 229.498,
+        "g_mean": 195.126,
+        "r_mean": 225.953,
+        "pos_weight": 1,
+        "white_ratio": 0.4
+    },
+
+  "architect_policy": {
+    "save_circle": 2500,
+    "threshold": 0.6
+  },
+
+  "model_policy": {
+    "model_load_path": "./model/unet_small/",
+    "model_save_path": "./model/unet_save/morning",
+    "lr": 0.003,
+    "momentum": 0.9,
+    "weight_decay": 0.0001,
+    "lr_decay": 5000,
+    "use_multiloss": true
+  },
+
+
+  "train": true,
+  "predict_save_path": "./log"
+}
